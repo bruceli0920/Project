@@ -1,0 +1,21 @@
+{
+  "name": "wuh_wechat",
+  "version": "1.0.0",
+  "description": "wechat_service",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.23.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lwh",
+  "license": "ISC"
+}
