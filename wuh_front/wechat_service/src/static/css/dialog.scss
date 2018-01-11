@@ -1,0 +1,128 @@
+@import "../function/fn.scss";
+
+$weuiDialogBackgroundColor: #FAFAFC;
+$weuiDialogLineColor: #D5D5D6;
+$weuiDialogLinkColor: rgb(63,191,255);
+$weuiDialogLinkActiveBc: #EEEEEE;
+$globalTextColor:rgb(102,102,102);
+.dialog_alert,.dialog_confirm {
+    &.hidden{
+        display: none!important;
+    }
+}
+.mask {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+}
+.dialog {
+    position: fixed;
+    z-index: 9999;
+    width: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $weuiDialogBackgroundColor;
+    text-align: center;
+    box-shadow: 3px -3px 4px rgba(0,0,0,.4);
+    @include styleByDpr( border-radius,3px );
+    overflow: hidden;
+    .dialog_confirm & {
+        .dialog_hd {
+            padding-top: 1.2em;
+            padding-bottom: .9em;
+            @include styleByDpr( padding-left,20px );
+            @include styleByDpr( padding-right,20px );
+        }
+        .dialog_bd {
+            text-align: left;
+        }
+    }
+}
+
+.dialog_hd {
+    padding: 1.2em 0 1.0em;
+    color: $globalTextColor;
+}
+
+.dialog_title {
+    font-weight: 400;
+    // font-size: 17px;
+    @include font-dpr(17px);
+}
+
+.dialog_bd {
+    // padding: 0 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.6;
+    text-align: left; 
+    @include styleByDpr( padding-left,30px );
+    @include styleByDpr( padding-right,30px );
+    @include font-dpr(15px);
+    color: $globalTextColor;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.dialog_ft {
+    position: relative;
+    @include styleByDpr( line-height,42px );
+    @include styleByDpr( margin-top,20px );
+    @include font-dpr(17px);
+    display: flex;
+    a {
+        display: block;
+        flex: 1;
+        color: $weuiDialogLinkColor;
+        text-decoration: none;
+        @include setTapColor;
+        &:active {
+            background-color: $weuiDialogLinkActiveBc;
+        }
+        z-index:3;
+    }
+    &:after {
+        content: " ";
+        // @include setTopLine($weuiDialogLineColor);
+        @include setAllLine($weuiDialogLineColor);
+        z-index:2;
+    }
+    .dialog_confirm & {
+        a {
+            position: relative;
+            &:after {
+                content: " ";
+                @include setLeftLine($weuiDialogLineColor);
+            }
+            &:first-child {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.btn_dialog {
+    &.default {
+        color: #353535;
+    }
+    &.primary {
+        color: $weuiDialogLinkColor;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .dialog {
+        width: 35%;
+  }
+  [data-dpr="2"] .dialog,[data-dpr="3"] .dialog {
+        width: 85%;
+  }
+}

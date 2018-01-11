@@ -1,0 +1,43 @@
+@import "../function/fn.scss";
+$designWidth:750;
+.header{
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:10;
+	width:100%;
+	height:pxToRem(88); 
+	line-height: pxToRem(88);
+	text-align: center;
+	font-size:17px; 
+	background:#00B1FF;
+	color:#fff;
+	.notice{
+		position:absolute;
+		right:pxToRem(40); 
+		top:pxToRem(30); 
+		width:pxToRem(34); 
+		height:pxToRem(30);
+ 		background:url(../images/notice.png)  no-repeat;
+ 		background-size:contain;  
+ 		.sign{
+ 			position:absolute; 
+ 			right:pxToRem(-7); 
+ 			top:pxToRem(-7); 
+ 			display: none;
+			width:pxToRem(14); 
+			height:pxToRem(14);
+			 background:#ff0613; 
+			 border-radius: 50%;
+ 		}
+	}
+	.home{
+		position:absolute;
+		left:pxToRem(40); 
+		top:pxToRem(28);
+		width:pxToRem(35); 
+		height:pxToRem(32); 
+		background:url(../images/home.png)  no-repeat;
+		background-size:contain;
+	}
+}
