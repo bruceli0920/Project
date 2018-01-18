@@ -1,0 +1,495 @@
+*{padding:0;margin:0;list-style:none;}
+
+.contextmenu{
+  position:absolute;
+  top:0;
+  left:0;
+  background:#ffffff;
+  outline:none;
+  border-radius:3px;
+  padding:10px 0;
+  z-index:9999999;
+  overflow:hidden;
+  white-space: nowrap;
+}
+
+.contextmenu .menu_item{
+  padding: 5px 10px;
+  width: 100%;
+  list-style: none;
+  text-align: left;
+  color: #666;
+  font-size: 14px;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.contextmenu .menu_item:hover{
+  background:#ddd;
+  color:#666;
+}
+
+.rtmap_room_name{
+  position:absolute;
+  white-space: nowrap;
+  color:#555;
+  z-index:1000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.rtmap_room_name.hide{
+  display: none;
+}
+.rtmap_search_input{
+  width: 100%;
+  height: 28px;
+  font-size: 14px;
+  line-height: 28px;
+  padding-left: 5px;
+    border:none;
+}
+.rtmap_search_box{
+  position:fixed;
+  top:10px;/*0*/
+  /*left:0px;*/
+  /*right:0px;*/
+  padding-left:5px;
+  padding-right:65px;
+  z-index: 9999;
+  background:#fff;
+  height:40px;/*50*/
+  padding-top:6px;/*10*/
+  box-shadow: 1px 2px 4px 1px #999;/*1px 1px 1px #B3B3B3;/*#666*/
+  left: 2%;
+  width: 96%;
+}
+
+.rtmap_search_box .input_box{
+  float: left;
+  width: 100%;
+  position:relative;
+}
+.rtmap_search_box .input_box .clear_input_btn{
+  float: right;
+  position: absolute;
+  right: -20px;
+  top: 5px;
+  background-color: #E0E0E0;
+  border-radius: 15px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  display:none;
+}
+.rtmap_search_box .clear_history_btn{
+  text-align: center;
+  margin-top: 5px;
+  line-height: 28px;
+  cursor:pointer;
+}
+.rtmap_search_box .search_history_box{
+  margin-top: 7px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  display:none; 
+  position:relative;
+  z-index: 999;
+  box-shadow: 0px 2px 4px -1px #999;
+}
+.rtmap_search_box .search_history_box .history_item{
+  margin: 1px 0;
+  padding: 3px 5px;
+  cursor:pointer;
+}
+.rtmap_search_box .search_history_box .history_item:hover{
+  background-color: #f0f0f0;
+}
+
+.rtmap_search_box .search_category{
+  float: right;
+  width: 30px;
+  height: 30px;
+  margin-right: -64px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  cursor:pointer;
+  background: url(../img/category.png) center center no-repeat;
+  border-left: 1px solid gainsboro;
+  background-size: 24px;
+}
+
+.fa-th-list:before {
+  content: none;
+}
+.rtmap_search_box .category_box{
+  background-color: #fff;
+  position: absolute;
+  box-shadow: 0px 2px 4px -1px #999;
+  border: 1px solid #ddd;
+  top: 41px;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+.rtmap_search_box .back{
+  display:none;
+  margin-left:-30px;
+  float:left;
+}
+.rtmap_search_box .back .fa{
+  font-size: 20px;
+  line-height: 30px;
+  padding: 0 7px;
+}
+.rtmap_search_box.result{
+  padding-left:35px;
+}
+.rtmap_search_box.result .back{
+  display:block;
+}
+.rtmap_search_box .category_box ul{
+  text-align: center;
+  /*display:none;*/
+  padding-bottom: 15px;
+}
+.rtmap_search_box .category_box li{
+  width: 24%;
+  height: 40px;
+  display: inline-block;
+  margin: 15px 0;
+  border-radius: 5px;
+  line-height: 100px;
+  background-size: 40px;
+  background-position: center;
+  cursor:pointer;
+}
+.air_view{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    left: 0px;
+    top: 60px;
+    box-shadow: 1px 1px 5px #666;
+}
+.cashier_desk{
+  background:url('../img/cashier_desk.png') no-repeat;
+}
+.doorway{
+  background:url('../img/doorway.png') no-repeat;
+}
+.wc{
+  background:url('../img/wc.png') no-repeat;
+}
+.stairway{
+  background:url('../img/stairway.png') no-repeat;
+}
+
+/*start anJ*/
+.elevator{
+  background:url('../img/elevator.png') no-repeat;
+}
+
+.business {
+    background:url('../img/supermarket.png') no-repeat;
+}
+.restaurant {
+    background:url('../img/restaurant.png') no-repeat;
+}
+.power {
+    background:url('../img/power.png') no-repeat;
+}
+/*end anJ*/
+.ladder{
+  background:url('../img/escalator.png') no-repeat;
+}
+.atm{
+  background:url('../img/atm.png') no-repeat;
+}
+.information_desk{
+  background:url('../img/information_desk.png') no-repeat;
+}
+.water{
+  background:url('../img/water.png') no-repeat;
+}
+
+.rtmap_search_box .resultListBox{
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 41px;/*50*/
+  display:none;
+  box-shadow: 0px 2px 4px -1px #999;
+}
+.rtmap_search_box .resultListBox ul{
+  padding-right: 20px;
+  box-sizing: content-box;
+  /*width: 100%;*/
+  max-height: 249px;
+  overflow-y: scroll;
+}
+.rtmap_search_box .resultListBox li{
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  margin-left: 8px;
+}
+.rtmap_search_box .resultListBox li:hover{
+  background:#efefef;
+}
+.rtmap_search_box .resultListBox .poi_name{
+  font-size: 14px;
+  width: 100%;
+  display: block;
+}
+.rtmap_search_box .resultListBox .floor{
+  font-size: 12px;
+}
+.rtmap_search_box .search_btn{
+  float:right;
+  margin-right: -28px;
+  font-size:20px;
+  line-height: 28px;
+  cursor:pointer;
+  background:url(../img/search.png) center center no-repeat; 
+  width:20px;
+  height:28px;
+  background-size: 22px;
+}
+.fa-search:before {
+  content: none;
+}
+.rtmap_search_box .logo{
+  float:left;
+  background-size: 80px 18px;
+  height: 30px;
+  width: 100px;
+  margin-left: -100px;
+  background-position: 20px;
+}
+.floor_change_box{
+  float: left;
+  width: 40px;
+  /*margin-bottom:-44px;*/
+  margin-bottom:-20px;
+}
+.rtmap_floor_change_list{
+  display:none;
+  width: 40px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  float: left;
+  /*border-radius: 11px;
+  background-color: rgba(255,255,255,0.7);
+  box-shadow: 1px 1px 5px #666;*/
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.rtmap_floor_change_list .active_floor{
+  float: left;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ddd;
+  text-align: center;
+  line-height: 35px;
+}
+.rtmap_floor_change_list .list_scroll{
+  max-height:190px;
+  width:58px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.rtmap_floor_change_list .floor_list{
+  left: 10px;
+  cursor:pointer;
+}
+.rtmap_floor_change_list li{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  /*border-radius: 10px;*/
+  margin: 10px 0;
+  font-size: 16px;
+  /*background: #fff url(../img/floor_bg.png) center center no-repeat;*/
+  background: url(../img/floor_bg.png) center center no-repeat;
+  /*border:1px solid #aaa;*/
+  background-size: 40px;
+}
+.rtmap_floor_change_list li.active{
+  color: #0080ff;
+  /*background-color: #00CFFF;*/
+  /*border: 1px solid #5EA4A7;*/
+  background:url(../img/floor_active.png) center center no-repeat;
+  background-size: 40px;
+}
+.rtmap_floor_change_list li:first-child{
+  margin-top:0px;
+}
+.rtmap_floor_change_list li:last-child{
+  margin-bottom:0px;
+}
+.rtmap_floor_btn {
+    cursor: pointer;
+    color: #0080ff;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 25px;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    /*border: 2px solid #666;*/
+    /*border-radius: 5px;*/
+    background: rgba(255,255,255,0) url(../img/floor_bg.png) center center no-repeat;
+    background-size: 40px;
+    /*box-shadow: 1px 1px 5px #666;*/
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.leaflet-control-zoom.rtmap_zoom{
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  box-shadow: none;
+  border:2px solid #666;
+  display:none;
+}
+.leaflet-bar a.leaflet-control-zoom-in,
+.leaflet-bar a.leaflet-control-zoom-out{
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}
+.leaflet-touch .leaflet-bar a.leaflet-disabled{
+  color:#aaa;
+}
+.leaflet-touch .leaflet-bar a.leaflet-control-zoom-in,
+.leaflet-touch .leaflet-bar a.leaflet-control-zoom-out{
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}
+.history_btn_bar{
+  padding-right:40px;
+  border-top: 1px solid #efefef;
+}
+.history_btn_bar .slideup_history{
+  float: right;
+  margin-right: -40px;
+  display: inline-block;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-left:1px solid #ddd;
+}
+.history_btn_bar .slideup_history .fa{
+  font-size: 28px;
+}
+.bottom_angle,
+.top_angle{
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+}
+.bottom_angle .fa.disable,
+.top_angle .fa.disable{
+  color:#ddd;
+}
+.leaflet-top.leaflet-right{
+  position: relative;
+}
+.leaflet-top.leaflet-right.top{
+  z-index: 99999;
+}
+.clearBtn{
+  cursor:pointer;
+}
+.rtmap_room_name img {
+    max-width: 30px !important;
+    max-height: 30px !important;
+    /*border:1px solid red;*/
+    /*start anJ*/
+    line-height: normal;
+    margin-bottom: -4px;
+    /* padding-right: 2px; */
+    /*end anJ*/
+    /*position: absolute;*/
+    z-index: 2;
+}
+
+.rtmap_room_name div {
+  margin-left: 16px;
+  margin-top: 1px;
+  padding-right: 5px;
+  z-index: 1;
+  border: 1px solid #872406;
+  /* border-radius: 5px; */
+  background-color: #FFFFFF;
+  opacity: 0.8;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding-left: 6px;
+  color: #872406;
+}
+
+.company_logo{
+    bottom: 20px;
+    left: 60px;
+    position: fixed;
+    z-index:1000;
+}
+
+/* wechat debug area */
+#show {
+    position: fixed;
+    background-color: darkgray;
+    width: 100%;
+    height: 50%;
+    opacity: 0.6;
+    z-index: 9999999;
+    display: none;
+}
+
+#show .wechat_text {
+    font-size: 15px;
+    height: 15%;
+    overflow: auto;
+}
+
+#show .xy_text {
+    margin-top: 10px;
+    font-size: 15px;
+    height: 20%;
+    overflow: auto;
+}
+#show .step {
+    margin-top: 10px;
+    font-size: 15px;
+    height: 20%;
+    overflow: auto;
+}
+#show .timestamp {
+    margin-top: 10px;
+    font-size: 15px;
+    height: 20%;
+    overflow: auto;
+}
+#show .result_timestamp {
+    margin-top: 10px;
+    font-size: 15px;
+    height: 20%;
+    overflow: auto;
+}
+
+#show p {
+    white-space: nowrap;
+}

@@ -1,0 +1,13 @@
+.track_detail {
+  position: absolute;
+  display: -webkit-box;
+  display: flex;
+  box-sizing: border-box;
+  background: gray;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; }
+  .track_detail .slide_down_handle {
+    margin-top: -5px; }
+    .track_detail .slide_down_handle img {
+      width: 100%; }

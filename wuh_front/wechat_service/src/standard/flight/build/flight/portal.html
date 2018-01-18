@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://airtest.rtmap.com/ckgWechat/static/css/common.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="http://airtest.rtmap.com/ckgWechat/static/vendor/jquery/jquery-1.11.1.min.js"></script>
+    <script src="http://airtest.rtmap.com/ckgWechat/static/js/flexible.js"></script>
+    <script src="http://airtest.rtmap.com/ckgWechat/static/js/common.js"></script>
+    <script src="js/common.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    <script src="http://airtest.rtmap.com/ckgWechat//static/js/rtmap.lbspoisdk.1.0.1.js" namespace="wechat" period=2000></script>
+    <script src="http://airtest.rtmap.com/ckgWechat//static/js/getLocation.js"></script>
+    <link rel="stylesheet" href="css/portal.css">
+    <script src="js/common.js"></script>
+    <script src="js/portal.js"></script>
+    <title>航班动态</title>
+</head>
+
+<body>
+    <div class="g-wrap">
+        <div class="m-header">
+            航班动态
+        </div>
+        <div class="box">
+            <div class="tab">
+                <ul>
+                    <li class="active">
+                        <p>按航班号</p>
+                    </li>
+                    <li>
+                        <p>按起降地</p>
+                    </li>
+                    <li class="none">
+                        <p>我关注的</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont active flight">
+                <div class="flightno clearfix">
+                    <i class="icon fl"></i>
+                    <input type="text" class="fl" placeholder="请输入航班号">
+                </div>
+                <div class="date">
+                    <ul class="arrdep">
+                        <li class="active" data-arrdep="dep">出发日期</li>
+                        <li data-arrdep="arr">到达日期</li>
+                    </ul>
+                    <ul class="time">
+                        <!-- <li data-time="2-6">
+							<p class="day">6</p>
+							<p class="month">二月</p>
+						</li>
+						<li class="active" data-time="2-7">
+							<p class="day">7</p>
+							<p class="month">二月</p>
+						</li>
+						<li class="none" data-time="2-8">
+							<p class="day">8</p>
+							<p class="month">二月</p>
+						</li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="cont city">
+                <div class="address clearfix">
+                    <div class="depart fl">
+                        <input type="text" value="重庆" readonly="true" data-code="CKG">
+                    </div>
+                    <i class="icon fl cut"></i>
+                    <div class="dest fl right">
+                        <input type="text" value="广州" class="select" readonly="true" data-code="CAN">
+                    </div>
+
+                </div>
+                <div class="company">
+                    <input type="text" id="company" placeholder="请选择航空公司" readonly="true" data-code="">
+                    <span></span>
+                </div>
+                <div class="date">
+                    <p class="title">航班日期</p>
+                    <ul class="time">
+                        <!-- <li data-time="2-6">
+							<p class="day">6</p>
+							<p class="month">二月</p>
+						</li>
+						<li class="active" data-time="2-7">
+							<p class="day">7</p>
+							<p class="month">二月</p>
+						</li>
+						<li class="none" data-time="2-8">
+							<p class="day">8</p>
+							<p class="month">二月</p>
+						</li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="cont follow">
+                <div class="list">
+                    <ul>
+                        <!--<li>
+							<div class="title clearfix">
+								<p class="icon fl"></p>
+								<p class="fl name">海南航空公司CA1322</p>
+								<p class="fr follow">取消关注</p>
+							</div>
+							<div class="detail clearfix">
+								<div class="fl">
+									<p class="time">18:00</p>
+									<p class="city">北京</p>
+								</div>
+								<p class="status fl">到达</p>
+								<div class="fl">
+									<p class="time">20:00</p>
+									<p class="city">重庆</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="title clearfix">
+								<p class="icon fl"></p>
+								<p class="fl name">海南航空公司CA1322</p>
+								<p class="fr follow">取消关注</p>
+							</div>
+							<div class="detail clearfix">
+								<div class="fl">
+									<p class="time">18:00</p>
+									<p class="city">北京</p>
+								</div>
+								<p class="status fl">到达</p>
+								<div class="fl">
+									<p class="time">20:00</p>
+									<p class="city">重庆</p>
+								</div>
+							</div>
+						</li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="btn">查询</div>
+        </div>
+    </div>
+</body>
+
+</html>

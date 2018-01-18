@@ -1,0 +1,62 @@
+.track_dashboard {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+  .track_dashboard > .pull_up_info_list {
+    margin-bottom: -5px; }
+    .track_dashboard > .pull_up_info_list img {
+      width: 100%;
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg); }
+  .track_dashboard > .track_dashboard_content {
+    height: 60px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    background: white; }
+    .track_dashboard > .track_dashboard_content > .numberofinstruction {
+      width: 60px;
+      font-size: 20px;
+      color: #b5674e; }
+    .track_dashboard > .track_dashboard_content > .leftinstruction, .track_dashboard > .track_dashboard_content .rightinstruction {
+      padding: 24px 5px; }
+    .track_dashboard > .track_dashboard_content > .dashboardList {
+      -webkit-box-flex: 1 !important;
+      flex: 1 !important; }
+      .track_dashboard > .track_dashboard_content > .dashboardList .dashboardList_item {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        align-items: center;
+        font-size: 14px;
+        line-height: 18px; }
+        .track_dashboard > .track_dashboard_content > .dashboardList .dashboardList_item img {
+          width: 30px;
+          height: 30px;
+          margin: 10px; }
+
+.track_arrow {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center; }
+  /*.track_arrow.on {
+    background-image: url("../../../../img/arrow-on.png"); }
+  .track_arrow.off {
+    background-image: url("../../../../img/arrow-off.png"); }*/
+    .track_arrow.on {
+    background-image: url("http://maps.rtmap.com/V3.1/public/img/arrow-on.png"); }
+  .track_arrow.off {
+    background-image: url("http://maps.rtmap.com/V3.1/public/img/arrow-off.png"); }
+
+.rot180 {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }

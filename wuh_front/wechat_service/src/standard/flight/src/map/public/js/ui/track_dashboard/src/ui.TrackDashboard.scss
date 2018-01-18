@@ -1,0 +1,63 @@
+.track_dashboard{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  >.pull_up_info_list{
+    margin-bottom: -5px;
+    img {
+      width: 100%;
+      transform: rotate(180deg);
+    }
+  }
+  >.track_dashboard_content{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: white;
+    >.numberofinstruction{
+      width: 60px;
+      font-size: 20px;
+      color: rgb(181,103,78);
+    }
+    >.leftinstruction,.rightinstruction{
+      padding: 24px 5px;
+    }
+    >.dashboardList {
+      flex: 1 !important;
+      .dashboardList_item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 14px;
+        line-height: 18px;
+        img{
+          width: 30px;
+          height: 30px;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+
+.track_arrow{
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  //border: 1px solid;
+
+  &.on{
+    background-image: url("../../../../img/arrow-on.png");
+  }
+  &.off{
+    background-image: url("../../../../img/arrow-off.png");
+  }
+}
+
+.rot180{
+  transform: rotate(180deg);
+}

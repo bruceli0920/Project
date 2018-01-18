@@ -1,0 +1,229 @@
+@function pxTorem($px) {
+	@return 10*$px/$designWidth*1rem;
+}
+
+$designWidth:750px;
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+
+.g-wrap {
+	.m-header {
+		height: 1.17333rem;
+		background: #008cd6;
+		color: #fff;
+		width: 10rem;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 3;
+		.box_tab {
+			// border: 1px solid #fff;
+			height: pxTorem(64px); // border-radius: pxTorem(7px);
+			width: pxTorem(520px);
+			margin: pxTorem(11px) auto 0;
+		}
+		.tab,
+		.tabs {
+			font-size: 15px;
+			width: pxTorem(240px);
+			height: pxTorem(64px); // position: absolute;
+			border: 1px solid #fff;
+			border-radius: pxTorem(7px);
+			margin-right: pxTorem(10px); // left: 50%;
+			// top: pxTorem(11px);
+			// margin-left: pxTorem(-140px);
+			float: left;
+			display: flex;
+			border-sizing: border-box;
+			li {
+				flex: 1;
+				text-align: center;
+				line-height: pxTorem(64px);
+				&.active {
+					background: #fff;
+					border-radius: pxTorem(7px);
+					color: #00b1ff;
+				}
+			}
+		}
+		.btn {
+			line-height: pxTorem(30px);
+			font-size: 15px;
+			padding: pxTorem(5px);
+			position: absolute;
+			right: pxTorem(30px);
+			top: pxTorem(25px);
+			font-weight: bold;
+		}
+	}
+	.cont {
+		display: none;
+		&.active {
+			display: block;
+		}
+		.nav {
+			position: fixed;
+			left: 0;
+			top: pxTorem(88px);
+			width: pxTorem(750px);
+			font-size: 12px;
+			display: flex;
+			height: pxTorem(64px);
+			line-height: pxTorem(64px);
+			background: #eee;
+			z-index: 3;
+			p {
+				flex: 1;
+				text-align: center;
+			}
+		}
+		.m-filter {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			left: 0;
+			top: pxTorem(88px);
+			z-index: 4;
+			display: none;
+			.shadow {
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, .38);
+				position: fixed;
+				left: 0;
+				top: pxTorem(88px);
+			}
+			.options {
+				width: 100%;
+				position: fixed;
+				left: 0;
+				top: pxTorem(88px);
+				background: #fff;
+				z-index: 2;
+				.option {
+					padding-bottom: pxTorem(10px);
+					border-top: 1px solid #eee;
+					.item {
+						padding-left: pxTorem(27px);
+						.title {
+							font-size: 13px;
+							color: #666;
+							height: pxTorem(84px);
+							line-height: pxTorem(84px);
+						}
+						li {
+							width: pxTorem(121px);
+							height: pxTorem(50px);
+							text-align: center;
+							line-height: pxTorem(50px);
+							color: #333;
+							background: #f1f1f1;
+							margin-bottom: pxTorem(20px);
+							margin-right: pxTorem(20px);
+							&.active {
+								background: #c7eeff;
+							}
+						}
+					}
+					&.button {
+						.item {
+							overflow: hidden;
+							padding-top: pxTorem(30px);
+							li.cancel {
+								background: #f1f1f1;
+							}
+							li.on {
+								color: #fff;
+								background: #008cd6;
+							}
+						}
+					}
+				}
+			}
+		}
+		.list {
+			.layer {
+				height: 100%;
+				width: 100%;
+				background: #fff;
+				position: fixed;
+				left: 0;
+				top: pxTorem(88px);
+				z-index: 2;
+				display: none;
+			}
+			padding-top:pxTorem(161px);
+			font-size:13px;
+			li {
+				background: #fff;
+				border-top: 1px solid #f2f2f2;
+				border-bottom: 1px solid #f2f2f2;
+				display: flex;
+				margin-bottom: pxTorem(8px);
+				div {
+					text-align: center;
+					flex: 1;
+					overflow: hidden;
+					height: pxTorem(80px);
+					line-height: pxTorem(80px);
+					p {
+						display: inline-block;
+						white-space: nowrap;
+					}
+					&.terminalNo {
+						div{
+							width:100%;
+						}
+					}
+					&.str_wrap {
+						background: #fff;
+					}
+					&.acttime {
+						position: relative;
+						.tip {
+							display: none;
+							position: absolute;
+							right: 0;
+							top: pxTorem(-20px);
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.none {
+		display: none;
+	}
+	.msg {
+		text-align: center;
+	}
+	.msg1 {
+		display: none;
+		text-align: center;
+		color: #333;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		margin-top: pxTorem(-80px);
+		img {
+			width: pxTorem(140px);
+			display: block;
+			margin: 0 auto pxTorem(30px);
+		}
+	}
+}

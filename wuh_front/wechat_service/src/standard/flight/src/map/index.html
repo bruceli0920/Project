@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta id="map_version" value="2.4.2">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link href="public/css/jquery-confirm.min.css" rel="stylesheet">
+    <link href="http://res.rtmap.com/map/webmap_V3.1/public/js/vendor/leaflet/leaflet-src.css" rel="stylesheet">
+    <link href="http://res.rtmap.com/map/css/font-awesome.min.css" rel="stylesheet">
+    <!--<link href="http://res.rtmap.com/map/webmap_V3.1/public/css/rtmap.css?v=001" rel="stylesheet">
+    <link href="http://res.rtmap.com/map/webmap_V3.1/public/css/index.css?v=001" rel="stylesheet">-->
+    <link href="public/css/rtmap.css?v=001" rel="stylesheet">
+    <link href="public/css/index.css?v=001" rel="stylesheet">
+    <script src="http://res.rtmap.com/map/webmap_V3.1/public/js/color_config.js"></script>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://res.rtmap.com/map/webmap_V3.1/public/js/jquery-confirm.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    <script src="public/js/vendor/rtmap.lbspoisdk.1.0.1.js" namespace="wechat" period=2000></script>
+    <script src="http://res.rtmap.com/map/webmap_V3.1/public/js/vendor/leaflet/leaflet-src.js"></script>
+    <script src="http://res.rtmap.com/map/webmap_V3.1/public/js/cus_lib/g-sensor.min.js?v=0.01"></script>
+    <!--Todo将地图的版本改成3.2的-->
+    <script src="http://res.rtmap.com/map/webmap_V3.2/public/js/cus_lib/rtmap.min.js?v=0.01"></script>
+    <script src="http://res.rtmap.com/map/webmap_V3.2/public/js/index.min.js?v=0.01"></script>
+    <!--Object.assign polyfill-->
+    <script src="http://res.rtmap.com/map/webmap_V3.1/public/js/es6-polyfill.js?v=0.01"></script>
+    <!--ui 插件-->
+    <link href="http://res.rtmap.com/map/webmap_V3.1/public/js/ui/track_dashboard/dist/ui.TrackDashboard.css?v=001" rel="stylesheet">
+    <script src="http://res.rtmap.com/map/webmap_V3.1/public/js/ui/track_dashboard/dist/ui.TrackDashboard.js?v=0.01"></script>
+    <link href="http://res.rtmap.com/map/webmap_V3.1/public/js/ui/route_plan/dist/ui.RoutePlan.css?v=001" rel="stylesheet">
+    <script src="public/js/ui/route_plan/dist/ui.RoutePlan1.js?v=0.01"></script>
+    <link href="http://res.rtmap.com/map/webmap_V3.1/public/js/ui/track_detail/dist/ui.TrackDetail.css?v=001" rel="stylesheet">
+    <script src="http://res.rtmap.com/map/webmap_V3.1/public/js/ui/track_detail/dist/ui.TrackDetail.js?v=0.01"></script>
+    <link href="public/js/ui/route_display/dist/ui.routeDisplay.css?v=001" rel="stylesheet">
+    <script src="http://res.rtmap.com/map/webmap_V3.1/public/js/ui/route_display/dist/ui.routeDisplay.js?v=0.01"></script>
+    <script src="http://res.rtmap.com/map/webmap_V3.1/public/js/ui/loading/dist/ui.loading.js?v=0.01"></script>
+    <script src="public/js/route.js"></script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style rel="stylesheet">
+    </style>
+    <!-- 显示当前建筑物名称 -->
+    <title class="bdn"></title>
+</head>
+<body onselectstart="return false">
+<div id=show>
+        <div class="timestamp"></div>
+        <div class="wechat_text"></div>
+        <div class="xy_text"></div>
+        <div class="step"></div>
+        <div class="result_timestamp"></div>
+ </div>
+<div class="page">
+    <div class="canvas" id="canvas"></div>
+    <div class="top_right_bar"></div>
+    <!--<div class="top_right_bar_area">
+        <img src="./public/img/full_area.png" width="28px" height="28px">
+    </div>-->
+</div>
+<!--<div class="area_part">
+    <div class="air_area_div" model_name="flying">
+        <ul>
+            <li><img class="air_area" src="./public/img/air.png" width="90px" height="60px"></li>
+            <li>出发到达</li>
+        </ul>
+    </div>
+    <div class="food_area_div" model_name="shopping">
+        <ul>
+            <li><img class="food_area" src="./public/img/food.png" width="90px" height="60px"></li>
+            <li>购物餐饮</li>
+        </ul>
+    </div>
+    <div class="park_area_div" model_name="parking">
+        <ul>
+            <li><img class="park_area" src="./public/img/park.png" width="90px" height="60px"></li>
+            <li>停车场</li>
+        </ul>
+    </div>
+
+</div>-->
+<div><img class="company_logo" src="http://res.rtmap.com/map/img/logo.png" width="60px" height="15px"></div>
+<div class="route-box">
+    <div class="route-text">
+        <p>点击按钮切换路径导航</p>
+    </div>
+    <div class="route-btn">
+        <div class="C-S active">值机柜台-安检口</div>
+        <div class="S-B">安检口-登机口</div> 
+    </div> 
+</div> 
+<script>
+    if(window.location.search.length == 0) {
+        window.location.href=location.href+'?key=k7i23869hd&buildid=863200010050100001&labelstyle=circle-point'
+    }
+</script>
+
+</body>
+<html>

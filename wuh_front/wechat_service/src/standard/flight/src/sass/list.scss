@@ -1,0 +1,100 @@
+@function pxTorem($px) {
+	@return 10*$px/$designWidth*1rem;
+}
+
+$designWidth:750px;
+.g-wrap {
+	.list {
+		overflow: hidden;
+		li {
+			border-bottom: 1px solid #eee;
+			background: #fff;
+			padding-bottom: pxTorem(20px);
+			.title {
+				padding: pxTorem(39px);
+				font-size: 15px;
+				color: #333;
+				line-height: pxTorem(50px);
+				.icon {
+					display: block;
+					width: pxTorem(40px);
+					height: pxTorem(40px);
+					background: url(../images/logo.png) no-repeat;
+					background-size: contain;
+					margin-right: pxTorem(19px);
+				}
+				.fr {
+					color: #3cbafc;
+				}
+				.f2{
+					float: left;
+					width: 100%;
+					padding: 0 pxTorem(59px);
+					.sharename{
+						width: 25%;
+						display: block;
+						float: left;
+					}
+					.shareflt{
+						width: 60%;
+						display: block;
+						float: left;
+					}
+				}
+			}
+			.view {
+				color: #3cbafc;
+				font-size: 13px;
+				text-align: center;
+				margin-top:pxTorem(20px);
+			}
+			.detail {
+				text-align: center;
+				div {
+					width: pxTorem(275px);
+					height: pxTorem(100px);
+					.time {
+						font-size: 22px;
+						font-weight: bold;
+						margin-bottom: pxTorem(10px);
+					}
+				}
+				.status {
+					width: pxTorem(200px);
+					height: pxTorem(100px);
+					line-height: pxTorem(100px);
+				}
+			}
+		}
+	}
+	.msg {
+		display: none;
+		text-align: center;
+		width: pxTorem(750px);
+		height: pxTorem(100px);
+		background: #f8f8f8;
+		line-height: pxTorem(100px);
+		font-size: 14px;
+		color: #666;
+		img {
+			width: 100%;
+		}
+	}
+		.cqmsg {
+		display: none;
+		text-align: center;
+		color: #333;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		margin-top: pxToRem(-80);
+		font-size:16px;
+		img {
+			width: pxTorem(200px);
+			display: block;
+			margin: 0 auto pxTorem(30px);
+		}
+	}
+}

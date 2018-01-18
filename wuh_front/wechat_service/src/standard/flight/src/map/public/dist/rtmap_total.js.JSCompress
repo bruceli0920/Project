@@ -1,0 +1,7 @@
+﻿<jscompress public="http://www.jscompress.cn/" command="import-combineset">
+<combinefile path="rtmap_total.js">
+<sourcefile path="..\js\vendor\leaflet\leaflet.js" />
+<sourcefile path="..\js\cus_lib\rtmap.js" />
+<sourcefile path="..\js\index.js" />
+</combinefile>
+</jscompress>

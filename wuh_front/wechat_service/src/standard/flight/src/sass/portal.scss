@@ -1,0 +1,281 @@
+@function pxTorem($px) {
+	@return 10*$px/$designWidth*1rem;
+}
+
+$designWidth:750px;
+.g-wrap {
+	padding: pxTorem(107px) pxTorem(19px) pxTorem(19px);
+	font-size: 12px;
+	.box {
+		.tab {
+			background: #fff;
+			ul {
+				display: flex;
+				height: pxTorem(95px);
+				border-bottom: 1px solid #f0efef;
+				li {
+					flex: 1;
+					position: relative;
+					background: #fff;
+					font-size: 16px;
+					text-align: center;
+					height: pxTorem(94px);
+					line-height: pxTorem(94px);
+					border: 1px solid #f0efef;
+					margin-right: pxTorem(8px);
+					&.active {
+						height: pxTorem(96px);
+						border-bottom: none;
+					}
+					&.active:after {
+						display: block;
+						content: '';
+						position: absolute;
+						left: pxTorem(55px);
+						bottom: -1px;
+						width: pxTorem(120px);
+						height: pxTorem(4px);
+						background: #ff6175;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+		.cont {
+			display: none;
+			background: #fff;
+			padding: 0 pxTorem(39px) pxTorem(39px);
+			border: 1px solid #f0efef;
+			border-top: none;
+			&.active {
+				display: block;
+			}
+			.flightno {
+				padding: pxTorem(48px) 0 0 pxTorem(16px);
+				margin-bottom: pxTorem(49px); //39px
+				font-size: 15px;
+				.icon {
+					background: url(../images/plane1.png) no-repeat;
+					display: block;
+					width: pxTorem(46px);
+					height: pxTorem(31px);
+					background-size: contain;
+					margin-right: pxTorem(54px);
+				}
+				input {
+					width: pxTorem(490px);
+					display: block;
+					border-bottom: 1px solid #eee;
+					padding-bottom: pxTorem(17px);
+				}
+			}
+			.address {
+				padding-top: pxTorem(44px);
+				margin-bottom: pxTorem(44px);
+				font-size: 15px;
+				.right {
+					input {
+						text-align: right;
+					}
+				}
+				input {
+					padding-bottom: pxTorem(20px);
+					font-size: 15px;
+					border-bottom: 1px solid #eee;
+					color: #333;
+					width: pxTorem(260px); //260
+				}
+				.icon {
+					background: url(../images/arrow.png) no-repeat;
+					width: pxTorem(35px);
+					height: pxTorem(31px);
+					background-size: contain;
+					margin: 0 pxTorem(35px);
+				}
+			}
+			.company {
+				margin-bottom: pxTorem(44px);
+				position: relative;
+				padding-bottom: pxTorem(20px);
+				border-bottom: 1px solid #eee;
+				input {
+					width: 100%;
+					height: pxTorem(40px);
+					font-size: 15px;
+					position: relative;
+					color: #333;
+					&:after {
+						content: '';
+						display: block;
+						width: pxTorem(14px);
+						height: pxTorem(25px);
+						background: url(../images/arrow_right.png) no-repeat;
+						background-size: contain;
+						position: absolute;
+						right: 0;
+						bottom: pxTorem(20px);
+					}
+				}
+				span {
+					background: url(../images/clear.gif) no-repeat;
+					background-size: pxTorem(40px) pxTorem(40px);
+					display: none;
+					width: pxTorem(40px);
+					height: pxTorem(40px);
+					line-height: pxTorem(40px);
+					position: absolute;
+					text-align: center;
+					right: 0;
+					top: 0;
+					// transform: translate(0%, -50%)
+				}
+			}
+			.date {
+				.title {
+					font-size: 13px;
+					margin-bottom: pxTorem(39px);
+				}
+				.arrdep {
+					width: pxTorem(498px);
+					height: pxTorem(88px);
+					border: 1px solid #eee;
+					margin: 0 auto;
+					display: flex;
+					border-radius: pxTorem(88px);
+					overflow: hidden;
+					background: #eee;
+					margin-bottom: pxTorem(54px);
+					li {
+						flex: 1;
+						height: pxTorem(88px);
+						line-height: pxTorem(88px);
+						width: 50%;
+						text-align: center;
+						font-size : pxTorem(30px);
+						&.active {
+							background: #008cd6;
+							border-radius: pxTorem(88px);
+							color: #fff;
+						}
+					}
+				}
+				.time {
+					-padding: 0 pxTorem(40px);
+					display: flex;
+					li {
+						flex: 1;
+						height: pxTorem(119px);
+						border: 1px solid rgba(0, 0, 0, 0);
+						margin-right: pxTorem(59px);
+						text-align: center;
+						&.none {
+							margin-right: 0;
+						}
+						.day {
+							font-size: 22px;
+							font-weight: bold;
+							line-height: pxTorem(72px);
+						}
+						&.active {
+							border: 1px solid #ff6175;
+							color: #ff566b
+						}
+					}
+				}
+			}
+			.list {
+				li {
+					padding-bottom: pxTorem(20px);
+					position: relative;
+					&:after {
+						display: block;
+						content: '';
+						width: pxTorem(712px);
+						height: 1px;
+						background: #eee;
+						position: absolute;
+						left: pxTorem(-39px);
+						bottom: 0;
+					}
+					.title {
+						padding-top: pxTorem(39px);
+						padding-bottom: pxTorem(35px);
+						border-bottom: 1px solid #eee;
+						.icon {
+							display: block;
+							width: pxTorem(40px);
+							height: pxTorem(40px);
+							background: url(../images/logo.png) no-repeat;
+							background-size: contain;
+							margin-right: pxTorem(19px);
+						}
+						.name {
+							font-size: 15px;
+							color: #333;
+						}
+						.follow {
+							font-size: 12px;
+							color: #999;
+						}
+					}
+					.detail {
+						padding-top: pxTorem(39px);
+						div {
+							width: pxTorem(150px);
+							height: pxTorem(100px);
+							text-align: center;
+							.time {
+								font-size: 22px;
+								font-weight: bold;
+								height: pxTorem(70px);
+								line-height: pxTorem(70px);
+							}
+							.city {
+								height: pxTorem(30px);
+								line-height: pxTorem(30px);
+							}
+						}
+						.status {
+							width: pxTorem(325px);
+							text-align: center;
+							height: pxTorem(100px);
+							line-height: pxTorem(100px);
+						}
+					}
+				}
+			}
+		}
+		.btn {
+			position: absolute;
+			left: pxTorem(35px);
+			bottom: pxTorem(158px);
+			width: pxTorem(680px);
+			height: pxTorem(90px);
+			text-align: center;
+			line-height: pxTorem(90px);
+			color: #fff;
+			background: #008cd6;
+			font-size: 17px;
+		}
+	}
+	.msg {
+		display: none;
+		text-align: center;
+		color: #333;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		margin-top: pxToRem(-80);
+		// font-size: pxTorem(36px);
+		font-size:16px;
+		img {
+			width: pxTorem(200px);
+			display: block;
+			margin: 0 auto pxTorem(30px);
+		}
+	}
+}

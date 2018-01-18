@@ -1,0 +1,67 @@
+
+.track_dashboard{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width:100%;
+    border-radius: 3px;
+    /*background: rgba(255,255,255,0.9);*/
+    z-index: 2;
+    /*box-shadow: 1px 2px 5px #666;*/
+}
+
+.track_dashboard .numberofinstruction{
+    display: inline-block;
+    position: relative;
+    bottom: 22px;
+    left: 10px;
+    font-size: 18px;
+    color: #cc7e60;
+}
+
+.track_dashboard .leftinstruction {
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    bottom: 20px;
+    left: 48px;
+    font-size: 35px;
+    width: 20px;
+    height: 40px;
+    /*background: rgba(255,255,255,0) url(../img/left-arrow-disable.png) center center no-repeat;
+    background-size: cover;*/
+}
+
+.track_dashboard .rightinstruction {
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    bottom: 20px;
+    right: 5px;
+    font-size: 35px;
+    width: 20px;
+    height: 40px;
+    /*background: rgba(255,255,255,0) url(../img/right-arrow-enable.png) center center no-repeat;
+    background-size: cover;*/
+    background: url("http://");
+}
+
+.track_dashboard .item{
+    height:60px;
+    background:rgba(255,255,255,0.9);
+    position:absolute;
+    width:100%;
+    display:none;
+}
+.track_dashboard .item.top{
+    display:inline-block ;
+}
+.track_dashboard ul{
+    display: inline-block;
+    width: 70%;
+    left: 35px;
+    position: relative;
+    height: 60px;
+    font-size: 13px;
+    justify-content: center;
+}

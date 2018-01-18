@@ -1,0 +1,74 @@
+.ui-route-plan {
+  box-shadow: 0 3px 4px #bcb2af;
+  border: 1px solid transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background: #f2f0f0; }
+  .ui-route-plan ul,
+  .ui-route-plan li {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .ui-route-plan li {
+    border: 1px solid #efefef;
+    margin-top: -1px;
+    padding: 14px 6px;
+    background: white;
+    padding-left: 30px; }
+  .ui-route-plan .btn {
+    padding: 0.4rem 0.8rem;
+    margin-right: 1rem;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 1rem;
+    text-shadow: none;
+    background: #efefef; }
+  .ui-route-plan .btn-blue {
+    background: #00afec;
+    color: white;
+    padding: 3px 12px; }
+  .ui-route-plan .header {
+    display: -webkit-box;
+    display: flex;
+    border-bottom: 1px solid #cec4c4;
+    padding: 5px 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    background: white; }
+    .ui-route-plan .header div {
+      text-align: center;
+      font-size: 18px; }
+  .ui-route-plan #errInfo {
+    background: white;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    color: orange; }
+  .ui-route-plan #poilist {
+    max-height: 260px;
+    overflow: auto;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1); }
+  .ui-route-plan .form {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px 10px 0px 0px;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); }
+    .ui-route-plan .form input, .ui-route-plan .form a {
+      -webkit-box-flex: 1;
+      flex: 1;
+      font-size: 16px;
+      padding: 16px;
+      border-radius: 0px;
+      border: 0px; }
+      .ui-route-plan .form input:first-child, .ui-route-plan .form a:first-child {
+        border-bottom: 1px solid #cec4c4; }
+    .ui-route-plan .form input {
+      padding-left: 6px; }
+    .ui-route-plan .form a {
+      color: #00a2ff;
+      text-align: right; }

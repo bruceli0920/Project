@@ -1,0 +1,42 @@
+@function pxTorem($px){
+	@return  10*$px/$designWidth*1rem;
+}
+$designWidth:750px;
+.g-wrap{
+	.list{
+		li{
+			padding:pxTorem(39px) pxTorem(39px) pxTorem(30px);
+			border-bottom:1px solid #e5e5e5;
+			background:#fff;
+			.title{
+				font-size:16px;
+				color:#757575;
+				margin-bottom:pxTorem(16px);
+				height:pxTorem(35px);
+				line-height:pxTorem(35px);
+				position:relative;
+				&.unread:before{
+					content:'';
+					display:block;
+					width:pxTorem(12px);
+					height:pxTorem(12px);
+					background:#ff566b;
+					border-radius:50%;
+					position:absolute;
+					left:pxTorem(-20px);
+					top:pxTorem(12px);
+				}
+			}
+			.date{
+				font-size:12px;
+				color:#999;
+				margin-bottom:pxTorem(16px);
+			}
+			.cont{
+				font-size:14px;
+				line-height:pxTorem(44px);
+				color:#757575;
+			}
+		}
+	}
+}
