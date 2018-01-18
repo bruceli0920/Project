@@ -1,4 +1,4 @@
-// @import "../function/fn.scss";
+@import "../function/fn.scss";
 $designWidth:1080;
 @mixin roates($deg,$px){
     transform: rotate($deg) translate($px, 0px);

@@ -10,6 +10,13 @@ var obj = {
     basepath:'build',//代码压缩到build下 
     baseDir:'wyh_wechat' //代码压缩到build下的根目录
 }
+
+// 两种配置 
+// 1. 以 basepath为根目录启动服务 适合项目发不到 域名+ baseDir 下
+// 2. 以 basepath+'/'+baseDir 为启动目录 适合发布到 域名的根目录下 
+// serverRoot 的配置 影响 内部功能 公共资源 static的获取 和 base标签 href的替换问题
+var serverRoot = obj.basepath; // 启动服务的根目录 build || build/wechat ,basepath || basepath/baseDir
+
 module.exports = {
     basepath:obj.basepath, 
     baseDir:obj.baseDir,
@@ -19,6 +26,20 @@ module.exports = {
     replaceStr:(function(){ // 分支中 替换路径 专用 意在将 分支中的代码 打包到 dest 下对应的目录
        return  obj.basepath+'/'+obj.baseDir;
     }()),
+    // replaceStr: (function () { // 分支中 替换路径 专用 意在将 分支中的代码 打包到 dest 下对应的目录
+    //     return obj.basepath + '/' + obj.baseDir;
+    // }()),
+
+    serverRoot: serverRoot,
+    common: (function () { // 内部功能 获取公共资源 和 base标签的前缀
+        var result = '/';
+        if (serverRoot === obj.basepath) {
+            result += obj.baseDir + '/';
+        }
+        return result;
+    }()),
+
+
     link:{ // 公共的链接
         domain:'http://weixin.bcia.com.cn', // http://traffic.rtmap.com(:8081) 域名 测试时可以通过修改此参数 避免本地启动服务访问不到对应的服务 
         log:{
