@@ -1,0 +1,2 @@
+function newDate(e){var t,r,i,a,m,g=getUrlQueryString("debug")||!1,n=getUrlQueryString("type")||"",y=e.routine+"?type="+n,u=e.routine+"?type="+n,c="welcome/welcome.html?type="+n;t=e.endDay,r=e.birthDay,i=new Date,a=(r.getTime()-i.getTime())/864e5,0==(m=(t.getTime()-i.getTime())/864e5)||m<0?$("#iframe").attr("src",y):a<=0||"true"==g?$("#iframe").attr("src",u):(a>0||0==g)&&$("#iframe").attr("src",c)}
+//# sourceMappingURL=maps/activityDate.js.map

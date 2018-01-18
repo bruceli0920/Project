@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/wyh_wechat/static/css/common.css">
+    <link rel="stylesheet" href="css/liMarquee.css">
+    <link rel="stylesheet" href="css/portal.css">
+    <script src="/wyh_wechat/static/vendor/jquery/jquery-1.11.1.min.js"></script>
+    <script src="/wyh_wechat/static/js/flexible.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    <script src="/wyh_wechat/static/js/rtmap.lbspoisdk.1.0.1.js" namespace="wechat" period=2000></script>
+    <script src="/wyh_wechat/static/js/getLocation.js"></script>
+    <script src="/wyh_wechat/static/js/common.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.liMarquee.js"></script>
+    <script src="js/portal.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <div class="g-wrap">
+        <div class="m-header">
+            <div class="box_tab">
+                <ul class="tabs">
+                    <li class="active" data-airport="T2">T2</li>
+                    <li data-airport="T3">T3</li>
+                </ul>
+                <ul class="tab">
+                    <li class="active" data-arrOrDep="dep">出港</li>
+                    <li data-arrOrDep="arr">进港</li>
+                </ul>
+            </div>
+            <div class="btn">
+                筛选
+            </div>
+        </div>
+        <div class="g-box">
+            <div class="cont active">
+                <div class="m-filter">
+                    <div class="options">
+                        <div class="option state">
+                            <div class="item">
+                                <p class="title">航班动态</p>
+                                <ul class="clearfix">
+                                    <li class="fl active" data-state="">全部</li>
+                                    <li class="fl" data-state="DEP">起飞</li>
+                                    <li class="fl" data-state="CAN">取消</li>
+                                    <li class="fl" data-state="DLY">延误</li>
+                                    <!--<li class="fl" data-state="计划">计划</li>-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="option domint">
+                            <div class="item">
+                                <p class="title">航班机型</p>
+                                <ul class="clearfix">
+                                    <li class="fl active" data-domint="">全部</li>
+                                    <li class="fl" data-domint="I">国际港澳台</li>
+                                    <li class="fl" data-domint="D">国内</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="option button">
+                            <div class="item">
+                                <ul>
+                                    <li class="fr on">确定</li>
+                                    <li class="fr cancel">取消</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+                <div class="nav">
+                    <p>航班号</p>
+                    <p>到达地</p>
+                    <p>经停</p>
+                    <p>计划起飞</p>
+                    <p>实际起飞</p>
+                    <!-- <p>航站楼</p> -->
+                    <p>状态</p>
+                </div>
+                <div class="list">
+                    <div class="layer"></div>
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="m-filter">
+                    <div class="options">
+                        <div class="option state">
+                            <div class="item">
+                                <p class="title">航班动态</p>
+                                <ul class="clearfix">
+                                    <li class="fl active" data-state="">全部</li>
+                                    <li class="fl" data-state="ARR">到达</li>
+                                    <li class="fl" data-state="CAN">取消</li>
+                                    <li class="fl" data-state="DLY">延误</li>
+                                    <!--<li class="fl" data-state="计划">计划</li>-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="option domint">
+                            <div class="item">
+                                <p class="title">航班机型</p>
+                                <ul class="clearfix">
+                                    <li class="fl active" data-domint="">全部</li>
+                                    <li class="fl" data-domint="I">国际港澳台</li>
+                                    <li class="fl" data-domint="D">国内</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="option button">
+                            <div class="item">
+                                <ul>
+                                    <li class="fr on">确定</li>
+                                    <li class="fr cancel">取消</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+                <div class="nav">
+                    <p>航班号</p>
+                    <p>出发地</p>
+                    <p>经停</p>
+                    <p>计划到达</p>
+                    <p>实际到达</p>
+                    <!-- <p>航站楼</p> -->
+                    <p>状态</p>
+                </div>
+                <div class="list">
+                    <div class="layer"></div>
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="msg none drop-down">
+			<p>下拉加载更多数据</p>
+		</div> -->
+        <div class="msg1 none">
+            <img src="images/msg.png" />没有更多的航班数据
+        </div>
+        <!-- <div class="msg no-match">
+			<img src="images/roller.gif" alt="">
+			<p>没有查到匹配的航班</p>
+		</div> -->
+    </div>
+</body>
+
+</html>
